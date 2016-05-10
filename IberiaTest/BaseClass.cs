@@ -35,10 +35,10 @@ namespace IberiaTest
         {
             //ExcelLib lib = new ExcelLib();
             //ExcelLib.PopulateInCollection(@"H:\Data.xlsx");
-            
 
-
-            driver = new ChromeDriver();
+            string wanted_path = Path.GetDirectoryName(Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()));
+            string fullPath = Path.Combine(wanted_path, @"IberiaTest\Drivers");
+            driver = new ChromeDriver(fullPath);
             driver.Navigate().GoToUrl("https://dfw-xapp1-st.dnet3.com/");
             driver.Manage().Window.Maximize();
             Thread.Sleep(1000);
