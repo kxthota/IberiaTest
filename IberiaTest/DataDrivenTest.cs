@@ -20,6 +20,7 @@ namespace Iberiademo
         [TestInitialize]
         public void IntializeTestSuccess()
         {
+            //Added  comment here.
             string wanted_path = Path.GetDirectoryName(Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()));
             string fullPath = Path.Combine(wanted_path, @"IberiaTest\Drivers");
             driver = new ChromeDriver(fullPath);
